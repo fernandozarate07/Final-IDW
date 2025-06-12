@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/src/asset/img/favicon.png" type="png" />
+    <title>ClimaYa</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <!-- cdns -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body class="body">
+    <!-- header -->
+    <header class="header">
+      <img class="header__logo" src="/src/asset/img/ClimaYa.svg" alt="ClimaYa Logo" />
+      <form class="header__search">
+        <input type="text" class="header__input" />
+        <button class="header__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <!-- error   -->
+        <span class="header__errorSearch"></span>
+      </form>
+      <div class="header__btnContainer">
+        <button class="header__register">Registrarte</button>
+        <button class="header__login">Iniciar Session</button>
+    </header>
+    <!-- main & loader-->
+    <main class="main">
+      <div class="loaderContainer">
+        <div class="loader"></div>
+      </div>
+      <div class="main__infoContainer">
+        <div class="main__place item">
+          <h2 class="main__city"></h2>
+        </div>
+        <div class="main__temperatureContainer item">
+          <h4 class="main__celcius"></h4>
+          <h3 class="main__temperature"></h3>
+        </div>
+        <div class="main__statusImg item">
+          <i class="main__icon"></i>
+        </div>
+        <div class="main__statusText item">
+          <h3 class="main__condition"></h3>
+        </div>
+        <div class="main__dateTime item">
+          <h3 class="main__dayDate"></h3>
+          <p class="main__descriptions"></p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__copy">&copy; Final - Introducción al Desarrollo Web 2025 - Alumno: Fernando Zárate</p>
+    </footer>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

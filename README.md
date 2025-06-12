@@ -19,14 +19,17 @@ El proyecto está estructurado con una arquitectura **MVC (Modelo - Vista - Cont
 ### `model.js` (Modelo + Observador + Loader)
 
 #### Observadores:
+
 - `observers`: Array que almacena funciones observadoras.
 - `addObserver(observer)`: Añade una función observadora a la lista.
 - `notify(data)`: Ejecuta cada observador con los nuevos datos.
 
 #### Loader:
+
 - `showLoader()` y `hideLoader()`: Muestran u ocultan el spinner de carga.
 
 #### Datos:
+
 - `getData(city)`: Realiza una llamada `fetch` a la API de clima para obtener datos en base a la ciudad ingresada. Muestra el loader mientras espera.
 - `loadPage()`: Llama a `getData()` con la ciudad por defecto ("Buenos Aires") y notifica a los observadores con la respuesta.
 
@@ -35,7 +38,9 @@ El proyecto está estructurado con una arquitectura **MVC (Modelo - Vista - Cont
 ### `vision.js` (Vista)
 
 #### `renderMain(data)`:
+
 Función observadora que actualiza la interfaz con los datos recibidos:
+
 - Cambia el fondo de la página dependiendo del horario (día/noche).
 - Muestra el nombre de la ciudad, la temperatura, el ícono climático y condiciones actuales.
 - Actualiza la fecha y una breve descripción del pronóstico.
@@ -58,11 +63,13 @@ El renderizado se realiza manipulando directamente el DOM usando `querySelector`
 ## 🔄 Flujo de ejecución principal
 
 ### Arranque:
+
 1. Se llama a `loadPage()`, que obtiene los datos de clima de la ciudad por defecto.
 2. Los datos obtenidos se pasan a `notify(data)`.
 3. Se ejecuta `renderMain(data)` para actualizar la UI con esos datos.
 
 ### Interacción del usuario:
+
 1. El usuario ingresa una ciudad en el formulario y lo envía.
 2. Se valida el input.
 3. Se ejecuta `getData(nuevaCiudad)` si el input es válido.
@@ -80,12 +87,6 @@ El renderizado se realiza manipulando directamente el DOM usando `querySelector`
 
 ---
 
-## 🧩 Diagrama de flujo
-
-> Podés encontrar el diagrama en la carpeta `/docs` o adjunto en este repositorio como imagen: `mvc-flowchart.png`.
-
----
-
 ## 🌐 API utilizada
 
 Visual Crossing Weather API  
@@ -96,5 +97,5 @@ Visual Crossing Weather API
 ## ✍️ Autor
 
 Trabajo final realizado para la materia **Introducción al Desarrollo Web (IDW)** – 2025  
-Alumno: **Fernando Anibal del Valle Zarate** 
-Profesor/a:**Mg. María Isabel Masanet, Mg. Lic. Héctor Lépez** 
+Alumno: **Fernando Anibal del Valle Zarate**
+Profesor/a:**Mg. María Isabel Masanet, Mg. Lic. Héctor Lépez**
