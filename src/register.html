@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="asset/img/favicon.png" type="png" />
+    <title>ClimaYa</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/register.css" />
+
+    <!-- cdns -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body class="body">
+    <!-- header -->
+    <header class="header">
+      <a href="index.html"><img class="header__logo" src="asset/img/ClimaYa.svg" alt="ClimaYa Logo" /></a>
+      <div class="header__btnContainer">
+          <a href="register.html"><button class="header__register">Registrarte<i class="fa-solid fa-user"></i></button></a>
+        <a href="login.html"><button class="header__login">Iniciar Session<i class="fa-solid fa-right-to-bracket"></i></button></a>
+    </header>
+    <!-- main & loader-->
+    <main class="main">
+  <div class="loaderContainer">
+    <div class="loader"></div>
+  </div>
+  <!-- Formulario de registro -->
+  <section class="register">
+    <h2 class="register__title">Crear una cuenta</h2>
+    <form class="register__form">
+      <label for="email" class="register__label">Correo electrónico</label>
+      <input type="email" id="email" class="register__input" placeholder="ejemplo@mail.com" />
+
+      <label for="password" class="register__label">Contraseña</label>
+      <input type="password" id="password" class="register__input" placeholder="********" />
+
+      <label for="repeat-password" class="register__label">Repetir contraseña</label>
+      <input type="password" id="repeat-password" class="register__input" placeholder="********" />
+
+      <button type="submit" class="register__btn">Registrarse</button>
+    </form>
+    <div class="register__login">
+        <span>¿Ya tienes una cuenta?</span>
+        <a href="login.html">Inicia sesión</a>
+    </div>
+  </section>
+</main>
+    <footer class="footer">
+      <p class="footer__copy">&copy; Final - Introducción al Desarrollo Web 2025 - Alumno: Fernando Zárate</p>
+    </footer>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

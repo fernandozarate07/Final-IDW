@@ -1,0 +1,133 @@
+.main__infoContainer {
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: minmax(100px, auto) 1fr minmax(100px, auto) minmax(100px, auto);
+  gap: 2px;
+}
+.item {
+  background-color: var(--black-transparent);
+  padding: 5px;
+}
+/* name of place */
+.main__place {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__city {
+  font-size: 2rem;
+}
+/* status condition */
+.main__statusImg {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+.main__icon {
+  animation: carousel 10s linear infinite;
+  font-size: 10rem;
+}
+.main__statusText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+/* temperature */
+.main__temperatureContainer {
+  grid-row: 2 / 4;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__celcius {
+  font-size: 3rem;
+}
+.main__temperature {
+  font-size: 7rem;
+}
+/* date and descriptions */
+.main__dateTime {
+  grid-column: 1 / 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* Móviles pequeños (<= 576px) */
+@media (max-width: 576px) {
+  .main__infoContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .main__place {
+    grid-column: unset;
+    order: 1;
+  }
+  .main__city {
+    font-size: 1.2rem;
+  }
+  .main__statusImg {
+    order: 2;
+  }
+  .main__icon {
+    font-size: 3rem;
+  }
+  .main__temperatureContainer {
+    grid-column: unset;
+    order: 3;
+  }
+  .main__statusText {
+    order: 4;
+    font-size: 1.2rem;
+  }
+  .main__dateTime {
+    grid-column: unset;
+    order: 5;
+    text-align: center;
+  }
+  .main__celcius {
+    font-size: 1rem;
+  }
+  .main__temperature {
+    font-size: 3rem;
+  }
+}
+/* Pantallas grandes (>= 1400px) */
+@media (min-width: 1400px) {
+  .main__infoContainer {
+    width: 100%;
+    max-width: 1800px;
+  }
+  .item {
+    background-color: var(--black-transparent);
+    padding: 10px;
+  }
+  .main__city {
+    font-size: 2.5rem;
+  }
+  .main__icon {
+    font-size: 10.5rem;
+  }
+  .main__statusText {
+    font-size: 2rem;
+  }
+  .main__celcius {
+    font-size: 3.5rem;
+  }
+  .main__temperature {
+    font-size: 7.5rem;
+  }
+}

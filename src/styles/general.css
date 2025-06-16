@@ -13,7 +13,7 @@
 }
 @font-face {
   font-family: "Quicksand";
-  src: url(/src/asset/font/Quicksand/Quicksand-VariableFont_wght.ttf) format("truetype");
+  src: url(asset/font/Quicksand/Quicksand-VariableFont_wght.ttf) format("truetype");
   font-weight: 400;
 }
 /* keyframes */
