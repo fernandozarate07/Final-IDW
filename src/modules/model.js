@@ -18,10 +18,10 @@ function showLoader() {
 function hideLoader() {
   document.querySelector(".loaderContainer").style.display = "none";
 }
-// peticion a Api
-// async function getData(city) {
-//   const key = "7GJBTC4HB5EX8LYURPUN3CZEY";
-//   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${key}`;
+//peticion a Api
+async function getData(city) {
+  // const key = "7GJBTC4HB5EX8LYURPUN3CZEY"; // activar solo si es necesario.
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${key}`;
 
   showLoader();
 
@@ -33,7 +33,7 @@ function hideLoader() {
   return data;
 }
 
-// load home page
+// carga la pagina con el clima de Buenos Aires por defecto
 async function loadPage() {
   let city = "buenos aires";
   try {

@@ -35,6 +35,8 @@
             <label for="password" class="login__label">Contraseña</label>
             <input type="password" id="password" class="login__input" placeholder="********" />
             <button type="submit" class="login__btn">Registrarse</button>
+            <!-- error   -->
+            <span class="login__errorSearch"></span>
         </form>
         <div class="login__register">
             <span>¿No tienes cuenta?</span>
@@ -45,6 +47,7 @@
     <footer class="footer">
       <p class="footer__copy">&copy; Final - Introducción al Desarrollo Web 2025 - Alumno: Fernando Zárate</p>
     </footer>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="index.js" defer></script>
+    <script type="module" src="/src/modules/login.js" defer></script>
   </body>
 </html>

@@ -7,7 +7,7 @@ loadPage();
 // añade a renderMain como observador
 addObserver(renderMain);
 
-// validacion de los datos del input
+// validacion de los datos del input // Incluso podria encapsular esta logica en una funcion
 
 const formNewCity = document.querySelector(".header__search");
 formNewCity.addEventListener("submit", (event) => {
@@ -16,7 +16,7 @@ formNewCity.addEventListener("submit", (event) => {
   const inpNewCity = document.querySelector(".header__input");
   const nameNewCity = inpNewCity.value.trim();
   const errorMessage = document.querySelector(".header__errorSearch");
-
+  //aca manejamos el error de validacion de numeros
   if (nameNewCity === "" || !isNaN(nameNewCity)) {
     errorMessage.textContent = "Please choose a valid option";
     errorMessage.classList.add("visible");

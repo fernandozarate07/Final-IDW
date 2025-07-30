@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
 }
 .register__form input {
   padding: 10px;
@@ -59,4 +60,26 @@
 }
 .register__login a:hover {
   color: var(--black-soft);
+}
+.register__errorSearch {
+  padding: 5px;
+  position: absolute;
+  bottom: -80px;
+  right: 50px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  color: red;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 40px;
+
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.register__errorSearch.visible {
+  opacity: 1;
+  visibility: visible;
 }
