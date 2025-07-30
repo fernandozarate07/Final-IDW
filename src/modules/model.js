@@ -20,7 +20,7 @@ function hideLoader() {
 }
 //peticion a Api
 async function getData(city) {
-  // const key = "7GJBTC4HB5EX8LYURPUN3CZEY"; // activar solo si es necesario.
+  const key = "7GJBTC4HB5EX8LYURPUN3CZEY"; // descomentar solo si es necesario
   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${key}`;
 
   showLoader();
