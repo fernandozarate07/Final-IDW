@@ -19,9 +19,9 @@ function hideLoader() {
   document.querySelector(".loaderContainer").style.display = "none";
 }
 // peticion a Api
-async function getData(city) {
-  const key = "7GJBTC4HB5EX8LYURPUN3CZEY";
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${key}`;
+// async function getData(city) {
+//   const key = "7GJBTC4HB5EX8LYURPUN3CZEY";
+//   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&key=${key}`;
 
   showLoader();
 
